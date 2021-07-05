@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/00a6424141.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://bootswatch.com/5/simplex/bootstrap.min.css">
+    <title>MyExpenses App</title>
+</head>
+
+<body>
+
+    <div class="container mt-4">
+
+        <h1 class="display-4 text-center">
+            <i class="fas fa-money-check-alt"></i>
+            My Expenses List
+        </h1>
+        <form id="expenses-form">
+            <div class="form-group">
+                <label for="category" class="form-label">Choose a Category</label>
+
+                <select id="category" class="form-select">
+                    <option value="food">Food & Dining</option>
+                    <option value="weed">Weed</option>
+                    <option value="electrinics">Electronics & Software</option>
+                    <option value="personal">Personal Care</option>
+                    <option value="debt">Debt</option>
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="purchase" class="form-label">Purchase</label>
+                <input class="form-control" type="text" id="purchase" placeholder="Example: Grocoery,TV,etc ">
+            </div>
+
+            <div class="form-group">
+                <label for="price" class="form-label">Price</label>
+                <input class="form-control" type="text" id="price" placeholder="Example: 25 php ">
+            </div>
+            <input type="submit" class="btn btn-primary w-100 p-2 mt-3" value=" Add">
+        </form>
+
+        <table class="table table-striped mt-5">
+            <thead>
+                <th>Category</th>
+                <th>Purchase</th>
+                <th>Price <i class="fas fa-dollar-sign"></i></th>
+                <th></th>
+            </thead>
+            <tbody id="expenses-list"></tbody>
+        </table>
+
+
+    </div> <!-- close container div -->
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
